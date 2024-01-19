@@ -15,6 +15,8 @@ public class Main : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI stageText;
     [SerializeField]
+    TextMeshProUGUI strength;
+    [SerializeField]
     Text buffText;
     DataManager dataManager;
     EventManager eventManager;
@@ -23,9 +25,10 @@ public class Main : MonoBehaviour
     Button button1;
     Button button2;
     Button button3;
-    //体力值
-    [SerializeField]
-    TextMeshProUGUI strength;
+    Button button4;
+    Button buttonNext;
+    Button buttonPause;
+
 
     void Start()
     {
@@ -42,7 +45,7 @@ public class Main : MonoBehaviour
         this.buffManager.ReadBuffsFromJson("Assets/configs/快捷buff.json");
         this.buffManager.ReadBuffsFromJson("Assets/configs/阶段3buff.json");
         this.buffManager.ReadBuffsFromJson("Assets/configs/死亡.json");
-        
+
         this.buffManager.PrintBuffs();
 
         this.eventManager = gameObject.GetComponent<EventManager>();
@@ -58,62 +61,20 @@ public class Main : MonoBehaviour
 
         this.eventManager.ShowEvent(1);
 
-        
+
         UpdateUI();
 
         this.button1 = GameObject.Find("ChoiceA").GetComponent<Button>();
         this.button2 = GameObject.Find("ChoiceB").GetComponent<Button>();
         this.button3 = GameObject.Find("ChoiceC").GetComponent<Button>();
-        this.button1.onClick.AddListener(() => {
-            this.DecreaseBy5();
-        });
-
-        this.button2.onClick.AddListener(() => {
-            this.DecreaseBy10();
-        });
-        this.button3.onClick.AddListener(() => {
+        this.button4 = GameObject.Find("ChoiceD").GetComponent<Button>();
+        this.buttonNext = GameObject.Find("Next").GetComponent<Button>();
+        this.buttonPause = GameObject.Find("Pause").GetComponent<Button>();
+        this.buttonNext.onClick.AddListener(() =>
+        {
             this.RefreshAndReval(); //下一回合
         });
 
-    }
-
-    // void ShowPopup(string message)
-    // {
-    //     popupText.text = message;
-    //     gameObject.SetActive(true);
-    // }
-
-    // void ClosePopup()
-    // {
-    //     gameObject.SetActive(false);
-    // }
-
-    void DecreaseBy5()
-    {
-        if (this.player.GetData("精力") >= 5)
-        {
-            this.player.SetData("精力", this.player.GetData("精力") - 5);
-        }
-        else
-        {
-            Debug.Log("体力值已不足");
-        }
-
-        UpdateUI();
-    }
-
-    void DecreaseBy10()
-    {
-        if (this.player.GetData("精力") >= 10)
-        {
-            this.player.SetData("精力", this.player.GetData("精力") - 10);
-        }
-        else
-        {
-            Debug.Log("体力值已不足");
-        }
-
-        UpdateUI();
     }
 
     public void UpdateUI()
@@ -130,15 +91,5 @@ public class Main : MonoBehaviour
     {
         this.dataManager.Refresh();
         this.UpdateUI();
-    }
-    
-    void OnDisable()
-    {
-        CancelInvoke("RefreshAndReval");
-    }
-
-    void OnDestroy()
-    {
-        CancelInvoke("RefreshAndReval");
     }
 }

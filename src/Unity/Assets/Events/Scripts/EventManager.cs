@@ -261,24 +261,18 @@ public class EventManager : MonoBehaviour
         // 调整选项大小和位置，并且将多余的选项隐藏
         if (currentEvent.optionNumbers == 1)
         {
-            ButtonPanel.Find("Choice1").GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
             ButtonPanel.Find("Choice1").gameObject.SetActive(true);
             ButtonPanel.Find("Choice2").gameObject.SetActive(false);
             ButtonPanel.Find("Choice3").gameObject.SetActive(false);
         }
         else if (currentEvent.optionNumbers == 2)
         {
-            ButtonPanel.Find("Choice1").GetComponent<RectTransform>().anchoredPosition = new Vector2(-195, 0);
-            ButtonPanel.Find("Choice2").GetComponent<RectTransform>().anchoredPosition = new Vector2(195, 0);
             ButtonPanel.Find("Choice1").gameObject.SetActive(true);
             ButtonPanel.Find("Choice2").gameObject.SetActive(true);
             ButtonPanel.Find("Choice3").gameObject.SetActive(false);
         }
         else if (currentEvent.optionNumbers == 3)
         {
-            ButtonPanel.Find("Choice1").GetComponent<RectTransform>().anchoredPosition = new Vector2(-195, 0);
-            ButtonPanel.Find("Choice2").GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
-            ButtonPanel.Find("Choice3").GetComponent<RectTransform>().anchoredPosition = new Vector2(195, 0);
             ButtonPanel.Find("Choice1").gameObject.SetActive(true);
             ButtonPanel.Find("Choice2").gameObject.SetActive(true);
             ButtonPanel.Find("Choice3").gameObject.SetActive(true);
