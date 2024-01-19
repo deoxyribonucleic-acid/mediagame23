@@ -244,8 +244,8 @@
             {
                 "name": "不要伤害我！",
                 "description": "你的心理承受极限（心理压力+20）",
-                "buffs": "22",
-                "duration": "5",
+                "buffs": "22,18",
+                "duration": "5,0",
                 "upcoming_events": "none",
                 "event_delays": "0"
             },

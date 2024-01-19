@@ -14,16 +14,15 @@ namespace CustomEventSystem
         public string name; // 名称
         public string description; // 描述
         public Dictionary<int, int> buffs; // 各个选项附带的buffID和持续时间
-        public Dictionary<int, int> upcoming_events; // 各个选项的接续eventID和延后回合数
-        public Option(string name, string description, Dictionary<int, int> buffs, Dictionary<int, int> upcoming_events)
+        public Dictionary<int, int> upcomingEvents; // 各个选项的接续eventID和延后回合数
+        public Option(string name, string description, Dictionary<int, int> buffs, Dictionary<int, int> upcomingEvents)
         {
             this.name = name;
             this.description = description;
             this.buffs = buffs;
-            this.upcoming_events = upcoming_events;
+            this.upcomingEvents = upcomingEvents;
         }
     }
-
     // 基础事件类
     public class EventObject
     {
@@ -45,19 +44,6 @@ namespace CustomEventSystem
         public bool isTriggered; // 事件是否被触发
         public bool isRepeatable; // 事件是否可重复触发
         public int scheduledTurn = -1; // 事件被触发的回合数,-1表示不被触发
-
-        public EventObject()
-        {
-            this.title = "";
-            this.content = "";
-            this.image = null;
-            this.optionNumbers = 0;
-            this.eventOptions = new List<Option>();
-            this.conditions = new List<Tuple<string, int, compareOperator>>();
-            this.isTriggered = false;
-            this.isRepeatable = false;
-            this.scheduledTurn = -1;
-        }
         public void Print()
         {
             string str = "";
@@ -87,7 +73,7 @@ namespace CustomEventSystem
                     }
                 }
                 str += "OptionUpcomingEvents: " + "\n";
-                foreach (KeyValuePair<int, int> upcoming_event in option.upcoming_events)
+                foreach (KeyValuePair<int, int> upcoming_event in option.upcomingEvents)
                 {
                     str += "UpcomingEventID: " + upcoming_event.Key + ", ";
                     str += "UpcomingEventDelay: " + upcoming_event.Value + "\n";

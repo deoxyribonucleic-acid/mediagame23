@@ -23,10 +23,10 @@ namespace CustomEventSystem
             this.dataManager = gameObject.GetComponent<DataManager>();
             this.buffManager = gameObject.GetComponent<BuffManager>();
             Button[] buttons = eventWindow.transform.Find("Buttons").GetComponentsInChildren<Button>();
-            this.ActivateEvent(49,75);
-            this.ActivateEvent(48,0);
-            this.ActivateEvent(47,0);
-            this.ActivateEvent(29,0);
+            this.ActivateEvent(49, 75);
+            this.ActivateEvent(48, 0);
+            this.ActivateEvent(47, 0);
+            this.ActivateEvent(29, 0);
         }
         public bool JudgeCondition(List<Tuple<string, int, EventObject.compareOperator>> conditions)
         {
@@ -67,7 +67,7 @@ namespace CustomEventSystem
                             }
                             break;
                         default:
-                            throw new Exception("Invalid compare operator!");
+                            throw new Exception("EventManager: JudgeCondition: Invalid compare operator: " + condition.Item3);
                     }
                 }
             }
@@ -110,9 +110,9 @@ namespace CustomEventSystem
                             buffManager.ActivateBuff(buff.Key, buff.Value);
                         }
                     }
-                    if (selectedOption.upcoming_events.Count > 0)
+                    if (selectedOption.upcomingEvents.Count > 0)
                     {
-                        foreach (KeyValuePair<int, int> upcoming_event in selectedOption.upcoming_events)
+                        foreach (KeyValuePair<int, int> upcoming_event in selectedOption.upcomingEvents)
                         {
                             ActivateEvent(upcoming_event.Key, upcoming_event.Value);
                         }
@@ -173,7 +173,8 @@ namespace CustomEventSystem
         {
             if (delayTurn < 0)
             {
-                throw new Exception("Invalid delay turn!");
+                Debug.Log("EventManager: ActivateEvent: Ignore negative delayTurn " + delayTurn);
+                return;
             }
             if (allEvents.ContainsKey(eventID))
             {
@@ -190,12 +191,12 @@ namespace CustomEventSystem
                     EventObject EventObject = allEvents[eventID];
                     EventObject.scheduledTurn = this.dataManager.turn + delayTurn;
                     pendingEvents.Add(eventID, EventObject);
-                    Debug.Log("Add event " + eventID + " to pendingEvents " + "at turn " + EventObject.scheduledTurn);
+                    Debug.Log("Add event " + allEvents[eventID].title + " to pendingEvents " + "at turn " + EventObject.scheduledTurn);
                 }
             }
             else
             {
-                throw new Exception("Invalid event ID!");
+                throw new Exception("EventManager: ActivateEvent: Attempt to activate an event that does not exist! eventID: " + eventID);
             }
         }
 
@@ -347,7 +348,7 @@ namespace CustomEventSystem
                             curEvent.conditions = conditions;
                             break;
                         default:
-                            throw new System.Exception("Read Event Json Error: Unexpected property " + property);
+                            throw new System.Exception("EventManager: ReadEventsFromJson: Invalid property name: " + property);
                     }
                 }
             }

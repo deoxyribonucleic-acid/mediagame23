@@ -35,7 +35,7 @@ public class GameLogic : MonoBehaviour
     Button buttonPause;
 
 
-    void Start()
+    void Awake()
     {
         gameObject.AddComponent<DataObject>();
         this.player = gameObject.GetComponent<DataObject>();
@@ -156,12 +156,13 @@ public class GameLogic : MonoBehaviour
         pressureText.text = ((int)this.player.GetData("心理压力")).ToString();
         evidenceText.text = this.player.GetData("取证进度").ToString();
         stageText.text = this.player.GetData("热度等级").ToString();
-        buffText.text = this.player.PrintBuff();
+        buffText.text = this.buffManager.VisualizeActiveBuffs();
     }
 
     void Refresh()
     {
         this.dataManager.Refresh();
+        this.buffManager.Refresh();
         this.UpdateUI();
     }
     public void Restart()
