@@ -13,8 +13,6 @@ public class Main : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI evidenceText;
     [SerializeField]
-    TextMeshProUGUI popularityIncreaseText;
-    [SerializeField]
     TextMeshProUGUI stageText;
     [SerializeField]
     Text buffText;
@@ -28,9 +26,6 @@ public class Main : MonoBehaviour
     //体力值
     [SerializeField]
     TextMeshProUGUI strength;
-    //体力值不足弹窗
-    [SerializeField]
-    TextMeshProUGUI popupText;
 
     void Start()
     {
@@ -101,7 +96,6 @@ public class Main : MonoBehaviour
         }
         else
         {
-            popupText.text = "No strength!";
             Debug.Log("体力值已不足");
         }
 
@@ -116,7 +110,6 @@ public class Main : MonoBehaviour
         }
         else
         {
-            popupText.text = "No strength!";
             Debug.Log("体力值已不足");
         }
 
@@ -129,7 +122,6 @@ public class Main : MonoBehaviour
         popularityText.text = this.player.GetData("热度").ToString();
         pressureText.text = this.player.GetData("心理压力").ToString();
         evidenceText.text = this.player.GetData("证据").ToString();
-        popularityIncreaseText.text = this.player.GetData("热度增速").ToString();
         stageText.text = this.player.GetData("热度等级").ToString();
         buffText.text = this.player.RevealBuff();
     }
