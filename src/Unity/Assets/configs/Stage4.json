@@ -20,7 +20,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度",
                 "threshold": 300000,
                 "operator": "LessThan"
@@ -64,7 +63,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度",
                 "threshold": 10000,
                 "operator": "LessThan"
@@ -84,7 +82,7 @@
             {
                 "name": "新生",
                 "description": "...",
-                "buffs": "99",
+                "buffs": "97",
                 "duration": "1000",
                 "upcoming_events": "none",
                 "event_delays": "1"
@@ -92,7 +90,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "心理压力",
                 "threshold": 20,
                 "operator": "LessThanOrEqualTo"
@@ -120,7 +117,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": -1,
                 "operator": "GreaterThan"
@@ -148,7 +144,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": -1,
                 "operator": "GreaterThan"
@@ -168,7 +163,7 @@
             {
                 "name": "晚安，好梦...",
                 "description": "...",
-                "buffs": "99",
+                "buffs": "97",
                 "duration": "1000",
                 "upcoming_events": "none",
                 "event_delays": ""
@@ -176,7 +171,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "心理压力",
                 "threshold": 50,
                 "operator": "LessThanOrEqualTo"
@@ -196,7 +190,7 @@
             {
                 "name": "祝你一夜酣眠...",
                 "description": "...",
-                "buffs": "97",
+                "buffs": "98",
                 "duration": "0",
                 "upcoming_events": "none",
                 "event_delays": "0"
@@ -204,7 +198,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 50,
                 "operator": "GreaterThanOrEqualTo"
@@ -224,7 +217,7 @@
             {
                 "name": "丧钟为谁而鸣",
                 "description": "...",
-                "buffs": "99",
+                "buffs": "97",
                 "duration": "0",
                 "upcoming_events": "none",
                 "event_delays": ""
@@ -232,7 +225,6 @@
         ],
         "conditions" : [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -260,7 +252,6 @@
         ],
         "conditions" : [
             {
-                "target_object": "player",
                 "target_data": "心理压力",
                 "threshold": 100,
                 "operator": "GreaterThanOrEqualTo"
@@ -288,7 +279,6 @@
         ],
         "conditions" : [
             {
-                "target_object": "player",
                 "target_data": "精力",
                 "threshold": -100,
                 "operator": "LessThanOrEqualTo"
@@ -308,7 +298,7 @@
             {
                 "name": "今夜无人入睡",
                 "description": "...",
-                "buffs": "99",
+                "buffs": "98",
                 "duration": "0",
                 "upcoming_events": "none",
                 "event_delays": ""
@@ -316,9 +306,8 @@
         ],
         "conditions" : [
             {
-                "target_object": "player",
-                "target_data": "热度等级",
-                "threshold": 100,
+                "target_data": "热度",
+                "threshold": 10000,
                 "operator": "GreaterThanOrEqualTo"
             }
         ]

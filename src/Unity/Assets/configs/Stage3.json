@@ -20,7 +20,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度",
                 "threshold": 7000,
                 "operator": "GreaterThan"
@@ -64,7 +63,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": -1,
                 "operator": "GreaterThan"
@@ -92,7 +90,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": -1,
                 "operator": "GreaterThan"
@@ -120,7 +117,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": -1,
                 "operator": "GreaterThan"
@@ -148,7 +144,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": -1,
                 "operator": "GreaterThan"
@@ -176,7 +171,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -204,7 +198,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -232,7 +225,6 @@
         ],
         "conditions" : [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -268,9 +260,8 @@
         ],
         "conditions" : [
             {
-                "target_object": "player",
-                "target_data": "热度等级",
-                "threshold": 0,
+                "target_data": "热度",
+                "threshold": 500000,
                 "operator": "GreaterThan"
             }
         ]
@@ -296,7 +287,6 @@
         ],
         "conditions" : [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"

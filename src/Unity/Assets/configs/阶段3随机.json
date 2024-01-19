@@ -20,7 +20,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -48,7 +47,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -84,7 +82,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -120,7 +117,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -148,7 +144,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -176,7 +171,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -204,7 +198,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -232,7 +225,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"

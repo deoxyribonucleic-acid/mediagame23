@@ -3,7 +3,6 @@
         "BuffID": 14,
         "BuffName": "压力-5",
         "BuffType": "OneTimeAddition",
-        "TargetObject": "player",
         "Duration": 1,
         "TargetEffects": {
             "心理压力": -5
@@ -13,7 +12,6 @@
         "BuffID": 15,
         "BuffName": "压力+5",
         "BuffType": "OneTimeAddition",
-        "TargetObject": "player",
         "Duration": 1,
         "TargetEffects": {
             "心理压力": 5
@@ -23,7 +21,6 @@
         "BuffID": 16,
         "BuffName": "压力+10",
         "BuffType": "OneTimeAddition",
-        "TargetObject": "player",
         "Duration": 1,
         "TargetEffects": {
             "心理压力": 10
@@ -33,7 +30,6 @@
         "BuffID": 17,
         "BuffName": "压力-10",
         "BuffType": "OneTimeAddition",
-        "TargetObject": "player",
         "Duration": 1,
         "TargetEffects": {
             "心理压力": -10
@@ -43,7 +39,6 @@
         "BuffID": 18,
         "BuffName": "压力+20",
         "BuffType": "OneTimeAddition",
-        "TargetObject": "player",
         "Duration": 1,
         "TargetEffects": {
             "心理压力": 20
@@ -53,7 +48,6 @@
         "BuffID": 19,
         "BuffName": "压力-20",
         "BuffType": "OneTimeAddition",
-        "TargetObject": "player",
         "Duration": 1,
         "TargetEffects": {
             "心理压力": -20
@@ -63,7 +57,6 @@
         "BuffID": 20,
         "BuffName": "压力+30",
         "BuffType": "OneTimeAddition",
-        "TargetObject": "player",
         "Duration": 1,
         "TargetEffects": {
             "心理压力": 30
@@ -73,7 +66,6 @@
         "BuffID": 21,
         "BuffName": "压力-30",
         "BuffType": "OneTimeAddition",
-        "TargetObject": "player",
         "Duration": 1,
         "TargetEffects": {
             "心理压力": -30

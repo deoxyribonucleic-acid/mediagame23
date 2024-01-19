@@ -28,7 +28,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -47,8 +46,8 @@
         "eventOptions": [
             {
                 "name": "和领导请个假吧",
-                "description": "我要去睡一会儿...(心理压力+20)",
-                "buffs": "18",
+                "description": "我要去睡一会儿...(心理压力+10)",
+                "buffs": "16",
                 "duration": "0",
                 "upcoming_events": "none",
                 "event_delays": "0"
@@ -56,7 +55,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -84,7 +82,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -120,7 +117,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"
@@ -139,8 +135,8 @@
         "eventOptions": [
             {
                 "name": "和领导请个假吧",
-                "description": "我要去睡一会儿...(心理压力+20)",
-                "buffs": "18",
+                "description": "我要去睡一会儿...(心理压力+10)",
+                "buffs": "16",
                 "duration": "0",
                 "upcoming_events": "none",
                 "event_delays": "0"
@@ -148,7 +144,6 @@
         ],
         "conditions": [
             {
-                "target_object": "player",
                 "target_data": "热度等级",
                 "threshold": 0,
                 "operator": "GreaterThan"

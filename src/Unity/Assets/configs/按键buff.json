@@ -1,0 +1,41 @@
+[
+    {
+        "BuffID": "80",
+        "BuffName": "休息",
+        "BuffType": "OneTimeAddition",
+        "Duration": 1,
+        "TargetEffects": {
+            "心理压力": -5,
+            "精力": -20
+        }
+    },
+    {
+        "BuffID": "81",
+        "BuffName": "发帖澄清-1",
+        "BuffType": "OneTimeAddition",
+        "Duration": 1,
+        "TargetEffects": {
+            "取证进度" :-5,
+            "精力": -50
+        }
+    },
+    {
+        "BuffID": "82",
+        "BuffName": "发帖澄清",
+        "BuffType": "Addition",
+        "Duration": 2,
+        "TargetEffects": {
+            "热度增速": -0.05
+        }
+    },
+    {
+        "BuffID": "83",
+        "BuffName": "收集证据",
+        "BuffType": "OneTimeAddition",
+        "Duration": 1,
+        "TargetEffects": {
+            "取证进度": 10,
+            "精力": -80
+        }
+    }
+]
