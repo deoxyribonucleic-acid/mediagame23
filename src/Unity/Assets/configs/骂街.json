@@ -7,7 +7,7 @@
         "optionNumbers": 2,
         "isTriggered": false,
         "isRepeatable": true,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "回怼",
@@ -42,7 +42,7 @@
         "optionNumbers": 2,
         "isTriggered": false,
         "isRepeatable": true,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions":[
             {
                 "name":"回怼",
@@ -77,7 +77,7 @@
         "optionNumbers": 2,
         "isTriggered": false,
         "isRepeatable": true,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions":[
             {
                 "name":"回怼",
@@ -112,7 +112,7 @@
         "optionNumbers":1,
         "isTriggered":false,
         "isRepeatable":true,
-        "scheduledTurn":0,
+        "scheduledRound":0,
         "eventOptions":[
             {
                 "name":"爽！",
@@ -139,7 +139,7 @@
         "optionNumbers":1,
         "isTriggered":false,
         "isRepeatable":true,
-        "scheduledTurn":0,
+        "scheduledRound":0,
         "eventOptions":[
             {
                 "name":"忍一时乳腺增生...",

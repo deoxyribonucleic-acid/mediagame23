@@ -38,12 +38,12 @@ namespace CustomEventSystem
         public string title; // 事件标题
         public string content; // 事件文本
         public string image; // 事件插图
+        public bool isTriggered; // 事件是否被触发
+        public bool isRepeatable; // 事件是否可重复触发
+        public int scheduledRound = -1; // 事件被触发的回合数
         public int optionNumbers; // 包含选择数
         public List<Option> eventOptions; // 包含若干选择的数组
         public List<Tuple<string, int, compareOperator>> conditions; // 事件触发条件,包含属性名称，阈值, 比较符
-        public bool isTriggered; // 事件是否被触发
-        public bool isRepeatable; // 事件是否可重复触发
-        public int scheduledTurn = -1; // 事件被触发的回合数,-1表示不被触发
         public void Print()
         {
             string str = "";
@@ -53,7 +53,7 @@ namespace CustomEventSystem
             str += "OptionNumbers: " + this.optionNumbers + "\n";
             str += "isTriggered: " + this.isTriggered + "\n";
             str += "isRepeatable: " + this.isRepeatable + "\n";
-            str += "ScheduledTurn: " + this.scheduledTurn + "\n";
+            str += "scheduledRound: " + this.scheduledRound + "\n";
             str += "EventOptions: " + "\n";
             foreach (Option option in this.eventOptions)
             {

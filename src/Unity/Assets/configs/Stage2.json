@@ -7,7 +7,7 @@
         "optionNumbers":2,
         "isTriggered":false,
         "isRepeatable":false,
-        "scheduledTurn":0,
+        "scheduledRound":0,
         "eventOptions":[
             {
                 "name":"我要报警！",
@@ -43,7 +43,7 @@
         "optionNumbers":1,
         "isTriggered":false,
         "isRepeatable":false,
-        "scheduledTurn":0,
+        "scheduledRound":0,
         "eventOptions":[
             {
                 "name":"那就让警察来收拾你们吧！",
@@ -71,7 +71,7 @@
         "optionNumbers":1,
         "isTriggered":false,
         "isRepeatable":false,
-        "scheduledTurn":0,
+        "scheduledRound":0,
         "eventOptions":[
             {
                 "name":"无能为力",
@@ -99,7 +99,7 @@
         "optionNumbers":1,
         "isTriggered":false,
         "isRepeatable":false,
-        "scheduledTurn":0,
+        "scheduledRound":0,
         "eventOptions":[
             {
                 "name":"哎！",
@@ -127,7 +127,7 @@
         "optionNumbers":1,
         "isTriggered":false,
         "isRepeatable":false,
-        "scheduledTurn":0,
+        "scheduledRound":0,
         "eventOptions":[
             {
                 "name":"...",

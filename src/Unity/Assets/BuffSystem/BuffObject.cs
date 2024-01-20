@@ -22,7 +22,7 @@ namespace BuffSystem
         public float timer;
         public float duration;
         public DataObject targetObject;
-        public Dictionary<string, float> effects; //数值的名称和buffID
+        public Dictionary<string, float> effects; //数值的名称和产生的效果
 
         public virtual void OnAdd()
         {
@@ -64,7 +64,7 @@ namespace BuffSystem
             }
             timer = 1;
         }
-        public virtual void OnUpdate() //在 target object 的 Refresh() 中调用
+        public virtual void OnUpdate()
         {
             timer += 1;
                 if (buffType == BuffTypes.ContinuousAddition)
@@ -82,9 +82,8 @@ namespace BuffSystem
                     }
                 }
         }
-        public virtual void OnRemove() //由 target object 移除此buff时使用
+        public virtual void OnRemove()
         {
-            //告知目标移除buff
             if (buffType == BuffTypes.Addition)
             {
                 foreach (KeyValuePair<string, float> kvp in effects)

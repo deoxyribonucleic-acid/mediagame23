@@ -11,8 +11,8 @@ namespace CustomEventSystem
 {
     public class EventManager : MonoBehaviour
     {
-        private Dictionary<int, EventObject> pendingEvents = new Dictionary<int, EventObject>(); // 待选事件列表
-        public Dictionary<int, EventObject> allEvents = new Dictionary<int, EventObject>(); // 所有事件列表
+        private Dictionary<int, EventObject> pendingEvents = new Dictionary<int, EventObject>(); // 待发生事件
+        public Dictionary<int, EventObject> allEvents = new Dictionary<int, EventObject>(); // 所有事件
         DataManager dataManager;
         BuffManager buffManager;
         [SerializeField]
@@ -80,7 +80,7 @@ namespace CustomEventSystem
             {
                 foreach (KeyValuePair<int, EventObject> pendingEvent in pendingEvents)
                 {
-                    if ((this.eventWindow.activeSelf != true) && pendingEvent.Value.scheduledTurn <= dataManager.turn && this.JudgeCondition(pendingEvent.Value.conditions))
+                    if ((this.eventWindow.activeSelf != true) && pendingEvent.Value.scheduledRound <= dataManager.round && this.JudgeCondition(pendingEvent.Value.conditions))
                     {
                         showWindow(pendingEvent.Value);
                     }
@@ -169,18 +169,18 @@ namespace CustomEventSystem
             eventWindow.SetActive(true);
         }
 
-        public void ActivateEvent(int eventID, int delayTurn)
+        public void ActivateEvent(int eventID, int delay)
         {
-            if (delayTurn < 0)
+            if (delay < 0)
             {
-                Debug.Log("EventManager: ActivateEvent: Ignore negative delayTurn " + delayTurn);
+                Debug.Log("EventManager: ActivateEvent: Ignore negative delay " + delay);
                 return;
             }
             if (allEvents.ContainsKey(eventID))
             {
                 if (pendingEvents.ContainsKey(eventID))
                 {
-                    allEvents[eventID].scheduledTurn = dataManager.turn + delayTurn;  // 如果已经在pendingEvents里了，就直接改scheduledTurn
+                    allEvents[eventID].scheduledRound = dataManager.round + delay;  // 如果已经在pendingEvents里了，就直接改scheduledRound
                 }
                 else
                 {
@@ -189,9 +189,9 @@ namespace CustomEventSystem
                         throw new Exception("Attempt to schedule a triggered unrepeatable event!");
                     }
                     EventObject EventObject = allEvents[eventID];
-                    EventObject.scheduledTurn = this.dataManager.turn + delayTurn;
+                    EventObject.scheduledRound = this.dataManager.round + delay;
                     pendingEvents.Add(eventID, EventObject);
-                    Debug.Log("Add event " + allEvents[eventID].title + " to pendingEvents " + "at turn " + EventObject.scheduledTurn);
+                    Debug.Log("Add event " + allEvents[eventID].title + " to pendingEvents " + "at round " + EventObject.scheduledRound);
                 }
             }
             else
@@ -241,8 +241,8 @@ namespace CustomEventSystem
                         case "isRepeatable":
                             curEvent.isRepeatable = reader.ReadAsBoolean().Value;
                             break;
-                        case "scheduledTurn":
-                            curEvent.scheduledTurn = reader.ReadAsInt32().Value;
+                        case "scheduledRound":
+                            curEvent.scheduledRound = reader.ReadAsInt32().Value;
                             break;
                         case "eventOptions":
                             List<Option> options = new List<Option>();

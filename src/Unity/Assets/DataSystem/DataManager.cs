@@ -7,7 +7,7 @@ namespace DataSystem
 {
     public class DataManager : MonoBehaviour
     {
-        public int turn = 0;
+        public int round = 0;
         DataObject dt_obj;
         EventManager eventManager;
         BuffManager buffManager;
@@ -24,7 +24,7 @@ namespace DataSystem
         }
         public void Refresh()
         {
-            turn++;
+            round++;
             cur_stage = (int)dt_obj.GetData("热度等级");
             dt_obj.Refresh();
             float randomChoice = 0;
@@ -103,14 +103,14 @@ namespace DataSystem
                         eventManager.ShowEvent(8);
                     }
 
-                    if (turn >= 35 || (this.eventManager.JudgeCondition(this.eventManager.allEvents[39].conditions) && turn > 30))
+                    if (round >= 35 || (this.eventManager.JudgeCondition(this.eventManager.allEvents[39].conditions) && round > 30))
                     {
                         this.buffManager.DeactivateBuff(4);
                         this.eventManager.ShowEvent(39);
                     }
                     break;
                 case 5:
-                    if (turn >= 75)
+                    if (round >= 75)
                     {
                         this.eventManager.ShowEvent(49);
                     }
@@ -134,7 +134,7 @@ namespace DataSystem
         public void Reset()
         {
             dt_obj.Reset();
-            turn = 0;
+            round = 0;
             cur_stage = 0;
         }
     }

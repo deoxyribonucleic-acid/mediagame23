@@ -7,7 +7,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": true,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "确定",
@@ -34,7 +34,7 @@
         "optionNumbers": 2,
         "isTriggered": false,
         "isRepeatable": true,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "置之不理",
@@ -69,7 +69,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": true,
-        "scheduledTurn": 20,
+        "scheduledRound": 20,
         "eventOptions": [
             {
                 "name": "好吧",
@@ -96,7 +96,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": true,
-        "scheduledTurn": 20,
+        "scheduledRound": 20,
         "eventOptions": [
             {
                 "name": "跑什么啊",
@@ -123,7 +123,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": true,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "网爆开始了",

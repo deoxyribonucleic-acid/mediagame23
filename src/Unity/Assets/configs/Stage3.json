@@ -7,7 +7,7 @@
         "optionNumbers":1,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "糟糕！",
@@ -34,7 +34,7 @@
         "optionNumbers": 3,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "尝试穿过人群",
@@ -77,7 +77,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "救...命...",
@@ -104,7 +104,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "筋疲力尽",
@@ -131,7 +131,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "感谢人民警察...",
@@ -158,7 +158,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "晚安，好梦...",
@@ -185,7 +185,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "真相何在！",
@@ -212,7 +212,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "希望事情早日结束",
@@ -239,7 +239,7 @@
         "optionNumbers": 2,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "不要伤害我！",
@@ -274,7 +274,7 @@
         "optionNumbers": 1,
         "isTriggered": false,
         "isRepeatable": false,
-        "scheduledTurn": 0,
+        "scheduledRound": 0,
         "eventOptions": [
             {
                 "name": "今夜无人入睡...",
